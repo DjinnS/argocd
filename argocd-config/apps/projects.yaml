@@ -14,7 +14,7 @@ spec:
   source:
     repoURL: https://github.com/DjinnS/argocd.git
     targetRevision: HEAD
-    path: argocd-config
+    path: argocd-config/projects
   syncPolicy:
     automated:
       prune: false
