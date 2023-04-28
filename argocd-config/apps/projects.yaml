@@ -17,5 +17,5 @@ spec:
     path: argocd-config/projects
   syncPolicy:
     automated:
-      prune: false
+      prune: true
       selfHeal: true

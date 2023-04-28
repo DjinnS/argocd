@@ -17,5 +17,5 @@ spec:
     path: projects
   syncPolicy:
     automated:
-      prune: false
+      prune: true
       selfHeal: true
