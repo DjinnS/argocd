@@ -1,0 +1,21 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-manager
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    namespace: argocd
+    name: nfra
+  source:
+    repoURL: https://gitlab.laforge.cloud.bpifrance.fr/project/BRC/infrastructure/tooling-apps.git
+    targetRevision: HEAD
+    path: projects
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
