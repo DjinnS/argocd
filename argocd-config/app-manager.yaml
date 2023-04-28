@@ -10,9 +10,9 @@ spec:
   project: default
   destination:
     namespace: argocd
-    name: nfra
+    server: https://kubernetes.default.svc
   source:
-    repoURL: https://gitlab.laforge.cloud.bpifrance.fr/project/BRC/infrastructure/tooling-apps.git
+    repoURL: https://github.com/DjinnS/argocd.git
     targetRevision: HEAD
     path: projects
   syncPolicy:
